@@ -1,6 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import styled from 'styled-components'
+import { AppContainer } from '../styles/styles'
+import { Column } from './components/Column'
+
 const Home: NextPage = () => {
   return (
     <div>
@@ -11,7 +13,9 @@ const Home: NextPage = () => {
       </Head>
 
       <main >
-        <Hello>Nextjs + Styled Components</Hello>
+        <AppContainer>
+          <Column text="Todo:" />
+        </AppContainer>
       </main>
 
 
@@ -20,8 +24,3 @@ const Home: NextPage = () => {
 }
 
 export default Home
-
-/* Sample Css */
-const Hello = styled.p`
-font-size: 20px;
-`
